@@ -93,7 +93,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="เพศ :" />
+                    android:text="เพศ :"
+                    android:id="@+id/txtSex" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -201,20 +202,20 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/weight"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp" >
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/CodeTextProfile"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="กิจกรรม :" />
+                    android:text="กิจกรรม :"
+                    android:id="@+id/txtExercise" />
 
                 <Spinner
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/spinner"
-                    android:layout_weight="1" />
+                    android:id="@+id/spinner" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
