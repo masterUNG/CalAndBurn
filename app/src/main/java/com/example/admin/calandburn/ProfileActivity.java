@@ -29,6 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         // Bind Widget
+
         bindWidget();
 
         // Show View
