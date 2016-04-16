@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -23,6 +25,7 @@ public class EditProfile extends AppCompatActivity {
     private RadioGroup sexRadioGroup;
     private RadioButton maleRadioButton, femaleRadioButton;
     private Spinner exerciseSpinner;
+    private String exerciseString;
 
 
     @Override
@@ -39,7 +42,53 @@ public class EditProfile extends AppCompatActivity {
         //Show View
         showView();
 
+        //Create Spinner
+        createSpinner();
+
+        //Create Sex Radio
+        createSexRadio();
+
     }   // Main Method
+
+    private void createSexRadio() {
+
+        if (currentUserStrings[3].equals("male")) {
+            maleRadioButton.setChecked(true);
+        } else {
+            femaleRadioButton.setChecked(true);
+        }
+
+
+
+    }   // createSexRadio
+
+    private void createSpinner() {
+
+        String[] showStrings = getResources().getStringArray(R.array.my_act);
+        ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, showStrings);
+        exerciseSpinner.setAdapter(stringArrayAdapter);
+
+        exerciseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                if (i == 0) {
+                    exerciseString = currentUserStrings[7];
+                } else {
+                    exerciseString = Integer.toString(i);
+                }
+
+            }   // onItem
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                exerciseString = currentUserStrings[7];
+            }
+        });
+
+
+    }   // createSpiner
 
     public void clickSaveEdit(View view) {
 
@@ -74,7 +123,7 @@ public class EditProfile extends AppCompatActivity {
         sexRadioGroup = (RadioGroup) findViewById(R.id.radioGroup2);
         maleRadioButton = (RadioButton) findViewById(R.id.radioButton3);
         femaleRadioButton = (RadioButton) findViewById(R.id.radioButton4);
-        exerciseSpinner = (Spinner) findViewById(R.id.spinner2);
+        exerciseSpinner = (Spinner) findViewById(R.id.spinner);
 
     }   // bindWidget
 
