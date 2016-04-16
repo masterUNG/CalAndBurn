@@ -24,7 +24,8 @@
         android:background="@color/green_apple"
         android:layout_weight="1"
         android:text="บันทึก"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:onClick="clickSaveEdit" />
 
     <ScrollView
         android:layout_width="match_parent"

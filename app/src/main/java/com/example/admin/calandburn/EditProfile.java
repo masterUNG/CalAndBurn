@@ -13,6 +13,10 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by Admin on 31/3/2559.
  */
@@ -25,7 +29,9 @@ public class EditProfile extends AppCompatActivity {
     private RadioGroup sexRadioGroup;
     private RadioButton maleRadioButton, femaleRadioButton;
     private Spinner exerciseSpinner;
-    private String exerciseString;
+    private String exerciseString, sexString,
+            nameString, ageString, heightString,
+            weightString, dateString;
 
 
     @Override
@@ -54,11 +60,27 @@ public class EditProfile extends AppCompatActivity {
 
         if (currentUserStrings[3].equals("male")) {
             maleRadioButton.setChecked(true);
+            sexString = "male";
         } else {
             femaleRadioButton.setChecked(true);
+            sexString = "female";
         }
 
+        sexRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
+                switch (i) {
+                    case R.id.radioButton3:
+                        sexString = "male";
+                        break;
+                    case R.id.radioButton4:
+                        sexString = "female";
+                        break;
+                }
+
+            }   // onChecked
+        });
 
     }   // createSexRadio
 
@@ -91,6 +113,17 @@ public class EditProfile extends AppCompatActivity {
     }   // createSpiner
 
     public void clickSaveEdit(View view) {
+
+        nameString = nameEditText.getText().toString().trim();
+        ageString = ageEditText.getText().toString().trim();
+        heightString = heightEditText.getText().toString().trim();
+        weightString = weightEditText.getText().toString().trim();
+
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH/mm/ss");
+        Date date = new Date();
+        dateString = dateFormat.format(date);
+
+
 
     }   // clickSave
 
