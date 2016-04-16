@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Cal and Burn</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="food_label">อาหาร</string>
+    <string name="burn_label">กิจกรรม</string>
+    <string name="report_label">รายงานผล</string>
+    <string name="information_label">ข้อมูลน่ารู้</string>
+    <string name="profile_label">ข้อมูลส่วนตัว</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_input_profile">InputProfile</string>
+    <string name="title_activity_information">Information</string>
+    <string name="title_activity_food">FoodActivity</string>
+    <string name="title_activity_cal">CalActivity</string>
+    <string name="title_activity_burn">BurnActivity</string>
+    <string name="title_activity_report">ReportActivity</string>
+    <string name="name1">ชื่อ :</string>
+    <string name="sex1">เพศ :</string>
+    <string name="age1">อายุ :</string>
+    <string name="height1">ส่วนสูง :</string>
+    <string name="weight1">น้ำหนัก :</string>
+    <string name="act1">กิจกรรม :</string>
+    <string name="bmi1">BMI :</string>
+    <string name="weight_std">น้ำหนักอยู่ในเกณฑ์ :</string>
+    <string name="bmr1">พลังงานที่ใช้ต่อวัน :</string>
+    <string name="editdata1">แก้ไขข้อมูล</string>
+    <string name="mainmenu1">เมนูหลัก</string>
+
+    <string name="re_date"><u>วันที่</u></string>
+    <string name="re_listfood"><u>รายการอาหาร</u></string>
+    <string name="re_listactivity"><u>รายการกิจกรรม</u></string>
+    <string name="re_cal"><u>calorie</u></string>
+    <string name="re_num"><u>จำนวน</u></string>
+    <string name="re_time"><u>ชั่วโมง/นาที</u></string>
+    <string name="his_data">ข้อมูลย้อนหลัง</string>
+
+    <string name="get">ได้รับไป</string>
+    <string name="list_to_day">รายการที่ทำวันนี้</string>
+    <string name="requires">จากที่ต้องใช้ต่อวัน</string>
+    <string name="hour">ชั่วโมง</string>
+    <string name="min">นาที</string>
+    <string name="acthour">ต่อ 1 ชั่วโมง</string>
+    <string name="unit">ต่อ 1 หน่วย</string>
+    <string name="calorie">cal</string>
+    <string name="list_food">รายการบริโภค</string>
+    <string name="list_burn">รายการเผาผลาญ</string>
+    <string name="eat">กินไป..</string>
+    <string name="burn">เผาผลาญไป..</string>
+    <string name="title_activity_edit_profile">EditProfile</string>
+
+    <string name="h1_bmi">BMI</string>
+    <string name="info_bmi">\<b>BMI (Body Mass Index)</b> ดัชนีมวลกาย คือ
+        ค่าดัชนีที่คำนวณจากน้ำหนักและส่วนสูงเพื่อใช้เปรียบเทียบ
+        ความสมดุลระหว่างน้ำหนักตัวต่อความสูง
+        <i>BMI = น้ำหนัก(kg)/ส่วนสูง(m)^2</i>
+    ความสำคัญต่อการรู้ค่าดัชนีมวลกาย เพื่อดูอัตราการเสี่ยงต่อการเกิดโรคต่างๆ
+    โดย BMI จะใช้เป็นเกณฑ์ในการประเมิณภาวะอ้วนหรือผอม
+    1. ถ้า BMI น้อยกว่า 18.5 -- น้ำหนักน้อยกว่ามาตรฐาน
+    2. ถ้า BMI อยู่ระหว่าง 18.5 - 22.9 -- น้ำหนักปกติ
+    3. ถ้า BMI อยู่ระหว่าง 23 - 24.9 -- โรคอ้วนระดับ 1
+    4. ถ้า BMI อยู่ระหว่าง 25 - 29.9 -- โรคอ้วนระดับ 2
+    5. ถ้า BMI อยู่ระหว่าง 30 - 39.9 -- โรคอ้วนระดับ 3
+    6. ถ้า BMI เท่ากับ 40 หรือมากกว่า -- โรคอ้วนขึ้นสุด  </string>
+
+
+</resources>

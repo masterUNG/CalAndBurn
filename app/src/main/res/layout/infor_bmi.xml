@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.calandburn.CalActivity"
+    android:background="@drawable/bg4">
+
+    <ImageView
+        android:id="@+id/banner2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000000" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:onClick="onClick"
+        android:layout_height="50dp"
+        android:src="@drawable/banner2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/BMIscrollView"
+        android:layout_below="@+id/banner2"
+        android:layout_margin="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info_bmi"
+            android:id="@+id/textView34"
+            android:textSize="14dp" />
+    </ScrollView>
+
+
+</RelativeLayout>
