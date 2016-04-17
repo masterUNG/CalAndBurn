@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -123,9 +124,29 @@ public class EditProfile extends AppCompatActivity {
         Date date = new Date();
         dateString = dateFormat.format(date);
 
+        //Find Factor
+        String strFactor = findFactor(exerciseString);
+
+        //Log Check
+        Log.d("17April", "Name ==> " + nameString);
+        Log.d("17April", "Sex ==> " + sexString);
+        Log.d("17April", "Age ==> " + ageString);
+        Log.d("17April", "Height ==> " + heightString);
+        Log.d("17April", "Weight ==> " + weightString);
+        Log.d("17April", "MyACT ==> " + exerciseString);
+        Log.d("17April", "Factor ==> " + strFactor);
 
 
     }   // clickSave
+
+    private String findFactor(String exerciseString) {
+
+        String strFactor = "1";
+        final String[] factorStrings = {"1","1.2", "1.375", "1.55", "1.725", "1.9"};
+        strFactor = factorStrings[Integer.parseInt(exerciseString)];
+
+        return strFactor;
+    }
 
     private void showView() {
 
