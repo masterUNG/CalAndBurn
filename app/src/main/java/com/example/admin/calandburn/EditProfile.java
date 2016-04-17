@@ -127,6 +127,9 @@ public class EditProfile extends AppCompatActivity {
         //Find Factor
         String strFactor = findFactor(exerciseString);
 
+        //Find BMI
+        String strBMI = findBMI(weightString, heightString);
+
         //Log Check
         Log.d("17April", "Name ==> " + nameString);
         Log.d("17April", "Sex ==> " + sexString);
@@ -135,9 +138,25 @@ public class EditProfile extends AppCompatActivity {
         Log.d("17April", "Weight ==> " + weightString);
         Log.d("17April", "MyACT ==> " + exerciseString);
         Log.d("17April", "Factor ==> " + strFactor);
+        Log.d("17April", "BMI ==> " + strBMI);
+        Log.d("17April", "BMR ==> " + "Unknow");
+
 
 
     }   // clickSave
+
+    private String findBMI(String weightString, String heightString) {
+
+        String strBMI = null;
+
+        double douWeight = Double.parseDouble(weightString);
+        double douHeight = Double.parseDouble(heightString);
+
+        double douBMI = douWeight / (Math.pow(douHeight/100, 2));
+        strBMI = String.format("%.2f", douBMI);
+
+        return strBMI;
+    }
 
     private String findFactor(String exerciseString) {
 
