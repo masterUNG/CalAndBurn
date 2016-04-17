@@ -173,7 +173,7 @@ public class InputProfile extends AppCompatActivity {
                 douBMR = 665 + (9.6 * douWeight) + (1.8 * douHeight) - (4.7 * douAge);
                 break;
         } // switch
-        Log.d("cal", "BMR = " + douBMR);
+
 
         bmrString = String.format("%.2f", douBMR);
 

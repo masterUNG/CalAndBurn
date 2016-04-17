@@ -130,6 +130,10 @@ public class EditProfile extends AppCompatActivity {
         //Find BMI
         String strBMI = findBMI(weightString, heightString);
 
+        //Find BMR
+        String strBMR = findBMR(weightString,
+                heightString, ageString, sexString);
+
         //Log Check
         Log.d("17April", "Name ==> " + nameString);
         Log.d("17April", "Sex ==> " + sexString);
@@ -139,11 +143,51 @@ public class EditProfile extends AppCompatActivity {
         Log.d("17April", "MyACT ==> " + exerciseString);
         Log.d("17April", "Factor ==> " + strFactor);
         Log.d("17April", "BMI ==> " + strBMI);
-        Log.d("17April", "BMR ==> " + "Unknow");
+        Log.d("17April", "BMR ==> " + strBMR);
 
 
 
     }   // clickSave
+
+    private String findBMR(String weightString,
+                           String heightString,
+                           String ageString,
+                           String sexString) {
+
+        String strBMR = null;
+        double douWeight = Double.parseDouble(weightString);
+        double douHeight = Double.parseDouble(heightString);
+        double douAge = Double.parseDouble(ageString);
+
+        // Find BMR
+        double douBMR = 0;
+        switch (MaleOrFemale()) {
+            case 0: // male
+                douBMR = 66 + (13.7 * douWeight) + (5 * douHeight) - (6.8 * douAge);
+                break;
+            case 1: // female
+                douBMR = 665 + (9.6 * douWeight) + (1.8 * douHeight) - (4.7 * douAge);
+                break;
+        } // switch
+
+
+        strBMR = String.format("%.2f", douBMR);
+
+
+        return strBMR;
+    }
+
+    private int MaleOrFemale() {
+
+        int intResult = 0;
+        if (sexString.equals("male")) {
+            intResult = 0;
+        } else {
+            intResult = 1;
+        }
+
+        return intResult;
+    }
 
     private String findBMI(String weightString, String heightString) {
 
