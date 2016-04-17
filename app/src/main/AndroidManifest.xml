@@ -25,7 +25,6 @@
         <activity
             android:name=".Information"
             android:label="@string/title_activity_information" />
-
         <activity
             android:name=".CalActivity"
             android:label="@string/title_activity_cal" />
@@ -39,7 +38,7 @@
         <activity android:name=".EditProfile" />
         <activity android:name=".InfoBMI" />
         <activity android:name=".HisFoodData" />
-
+        <activity android:name=".SearchFood"></activity>
     </application>
 
 </manifest>
