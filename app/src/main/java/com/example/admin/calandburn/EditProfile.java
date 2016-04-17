@@ -145,6 +145,14 @@ public class EditProfile extends AppCompatActivity {
         Log.d("17April", "BMI ==> " + strBMI);
         Log.d("17April", "BMR ==> " + strBMR);
 
+        SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(MyOpenHelper.DATABASE_NAME,
+                MODE_PRIVATE, null);
+        sqLiteDatabase.delete("userTABLE", null, null);
+
+        UserTABLE userTABLE = new UserTABLE(this);
+        userTABLE.addValueToUser(dateString, nameString, sexString, ageString,
+                heightString, weightString, Integer.parseInt(exerciseString), strFactor,
+                strBMI, strBMR);
 
 
     }   // clickSave
