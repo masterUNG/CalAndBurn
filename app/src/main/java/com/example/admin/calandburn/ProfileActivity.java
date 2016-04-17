@@ -35,12 +35,13 @@ public class ProfileActivity extends AppCompatActivity {
         // Show View
         showView();
 
+    } // Main Method
 
-
-
-    } // Main Methon
-
-
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        showView();
+    }
 
     private void showView() {
 

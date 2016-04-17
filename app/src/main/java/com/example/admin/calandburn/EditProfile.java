@@ -154,6 +154,8 @@ public class EditProfile extends AppCompatActivity {
                 heightString, weightString, Integer.parseInt(exerciseString), strFactor,
                 strBMI, strBMR);
 
+        finish();
+
 
     }   // clickSave
 
