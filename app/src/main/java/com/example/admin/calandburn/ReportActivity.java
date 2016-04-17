@@ -50,8 +50,21 @@ public class ReportActivity extends AppCompatActivity {
         //Read Where on Date of burnTABLE
         whereBurnTABLE();
 
+        //Show Result Cal
+        showResultCal();
+
     }   // Main Method
 
+    private void showResultCal() {
+
+        double douCal = Double.parseDouble(calaryTextView.getText().toString());
+        double douBurn = Double.parseDouble(burnTextView.getText().toString());
+        double douSumCal = douCal - douBurn;
+
+        TextView textView = (TextView) findViewById(R.id.textView35);
+        textView.setText(Double.toString(douSumCal));
+
+    }
 
 
     private void whereBurnTABLE() {
